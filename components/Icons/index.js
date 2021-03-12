@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const baseSize = 32;
+
 const IconWrapper = styled.i`
   display: ${({isInline}) => isInline ? 'inline-block' : 'block'};
-  width: ${({size}) => size ? size : '24px'};
-  height: ${({size}) => size ? size : '24px'};
+  width: ${({size}) => size ? size : `${baseSize}px`};
+  height: ${({size}) => size ? size : `${baseSize}px`};
   color: ${({color, theme}) => color ? color : theme.colors.secondary};
 `;
 
