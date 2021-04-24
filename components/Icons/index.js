@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const baseSize = 32;
+const baseSize = 24;
 
 const IconWrapper = styled.i`
   display: ${({isInline}) => isInline ? 'inline-block' : 'block'};

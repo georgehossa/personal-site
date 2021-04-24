@@ -21,7 +21,7 @@ export const projects = [
     description: 'A simple tithe calculator',
     github_url: 'https://github.com/georgehossa/tithe-calc-app-vanilla-js',
     public_url: 'https://tithe-calc.netlify.app',
-    tags: ['javascript', 'css', 'html'],
+    tags: ['javascript', 'CSS', 'HTML'],
   },
   {
     id: 4,

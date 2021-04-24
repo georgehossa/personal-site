@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import { projects } from '../../data';
+import ProjectCard from '../../components/ProjectCard'
 
 const Projects = ({ projectsList }) => {
   const [allProjects, setAllProjects] = React.useState([]);
@@ -18,7 +19,9 @@ const Projects = ({ projectsList }) => {
     <Layout>
       <h1>Projects</h1>
       {/* { allProjects.map(project => (<div key={project.id}>{project.name}</div>))} */}
-      { projectsList.map(project => (<div key={project.id}>{project.name}</div>))}
+      <div>
+        { projectsList.map(project => (<ProjectCard key={project.id} project={project} />))}
+      </div>
     </Layout>
   )
 }
