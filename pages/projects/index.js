@@ -6,7 +6,8 @@ const Projects = () => {
 
   React.useEffect(() => {
     const getData = async () => {
-      const request = await fetch('http://localhost:3000/api/projects');
+      // const request = await fetch('http://localhost:3000/api/projects');
+      const request = await fetch('https://jorgehossa.netlify.app/api/projects');
       const response = await request.json();
       return setAllProjects(response);
     }
