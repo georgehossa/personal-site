@@ -1,7 +1,8 @@
 import React from 'react';
 import Layout from '../../components/Layout';
+import { projects } from '../../data';
 
-const Projects = () => {
+const Projects = ({ projectsList }) => {
   const [allProjects, setAllProjects] = React.useState([]);
 
   React.useEffect(() => {
@@ -11,14 +12,20 @@ const Projects = () => {
       const response = await request.json();
       return setAllProjects(response);
     }
-    getData();
+    // getData();
   }, []);
   return (
     <Layout>
       <h1>Projects</h1>
-      { allProjects.map(project => (<div key={project.id}>{project.name}</div>))}
+      {/* { allProjects.map(project => (<div key={project.id}>{project.name}</div>))} */}
+      { projectsList.map(project => (<div key={project.id}>{project.name}</div>))}
     </Layout>
   )
+}
+export async function getStaticProps(context) {
+  return {
+    props: { ...context.props, projectsList: projects },
+  }
 }
 
 
